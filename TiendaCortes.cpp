@@ -116,18 +116,21 @@ void imprimirProducto() {
     }
 }
 
+void swapProductos(Producto &a, Producto &b) {
+    Producto aux = a;
+    a = b;
+    b = aux;
+}
+
 //      Método de ordenamiento Burbuja.
 
 void ordenarProductosburbuja() {
     int i, j;
-    Producto aux;
-
+    
     for(i = 0; i < contadordeProductos - 1; i++) {
         for(j = 0; j < contadordeProductos - 1 - i; j++) {
             if(productoenLista[j].precio > productoenLista[j+1].precio) {
-                aux = productoenLista[j];
-                productoenLista[j] = productoenLista[j + 1];
-                productoenLista[j + 1] = aux;
+                swapProductos(productoenLista[j], productoenLista[j + 1]);
             }
           
         }
@@ -139,7 +142,6 @@ void ordenarProductosburbuja() {
 
 void ordenarProductosSelecion() {
     int i, j, min;
-    Producto aux;
 
     for(i = 0; i < contadordeProductos - 1; i++) {
         min = i;
@@ -150,9 +152,7 @@ void ordenarProductosSelecion() {
             }
         }
         if(min != i) {
-            aux = productoenLista[i];
-            productoenLista[i] = productoenLista[min];
-            productoenLista[min] = aux;
+            swapProductos(productoenLista[i], productoenLista[min]);
         }
     }
     imprimirProducto();
