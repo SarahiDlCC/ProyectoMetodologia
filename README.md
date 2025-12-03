@@ -53,9 +53,9 @@ Solo se muestran productos válidos.
 ### 3. Ordenar productos
 El sistema puede ordenar los productos **por precio (ascendente)** utilizando tres algoritmos:
 
-- 🔹 Método Burbuja  
-- 🔹 Método Selección  
-- 🔹 Método Inserción  
+- Método Burbuja  
+- Método Selección  
+- Método Inserción  
 
 Después del ordenamiento, se imprime la lista ordenada.
 
